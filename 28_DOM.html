@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: #fff;
+        }
+        #title{
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body class="bg-black">
+<div >
+    <h1 id="title">Welcome to our page</h1>
+    <h1 class="heading">DOM learning on Chai and Code </h1>
+    <h2 class="h2Check">Lorem ipsum dolor sit.</h2>
+    <h2 class="h2Check">Lorem ipsum dolor sit.</h2>
+    <h2 class="h2Check">Lorem ipsum dolor sit.</h2>
+    <h2 class="h2Check">Lorem ipsum dolor sit.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, ass   umenda.</p>
+
+    <ul class="ul">
+        <li class="li">1</li>
+        <li class="li">21</li>
+        <li class="li">321</li>
+    </ul>
+</div>    
+</body>
+</html>
+
+
+<!-- const title = document.getElementById('title')
+undefined
+title
+<h1 id=​"title" class=​"test">​Welcome to our page​</h1>​
+title.style.backgroundColor='green'
+'green'
+    title.style.padding="50%"
+'50%'
+    title.style.padding="0"
+'0' -->
+
+
+<!-- document.querySelector('h2')
+<h2 class=​"h2Check">​Lorem ipsum dolor sit.​</h2>​
+ document.querySelector('h2')
+<h2 class=​"h2Check">​Lorem ipsum dolor sit.​</h2>​
+ document.querySelector('.title')
+null
+ document.querySelector('.heading')
+<h1 class=​"heading">​DOM learning on Chai and Code ​</h1>​
+ document.querySelector('.h2Check')
+<h2 class=​"h2Check">​Lorem ipsum dolor sit.​</h2>​ -->
+
+
+<!-- textContet display all the text which are even hidden. -->
+<!-- innerText only gives the text which are visible on the site. -->
+
+<!-- document.querySelector('ul')
+<ul class=​"ul">​…​</ul>​
+const myul=document.querySelector('ul')
+undefined
+myul.querySelector('li')
+<li class=​"li">​::marker​"1"</li>​
+const turnGreen = myul.querySelector('li')
+undefined
+turnGreen.st
+undefined
+turnGreen.style.backgroundColor="orange"
+'orange'
+turnGreen.style.paddi
+undefined
+turnGreen.style.padding="10px"
+'10px'
+ turngre
+VM2427:1 Uncaught ReferenceError: turngre is not defined
+    at <anonymous>:1:2
+(anonymous) @ VM2427:1Understand this error
+ turnGreen.innerText="ding dong ding"
+'ding dong ding' -->
+
+<!-- 
+while using the querySelectorAll, output seems like array but it is nodelist. In which we will have to acccess the value by index value. -->
+
+<!-- const tempList=document.querySelectorAll('h2')
+undefined
+tempList.forEach(function (l) {
+    l.style.backgroundColor='blue'
+}) -->
+
+<!-- const tempList=document.getElementsByClassName('h2Check')
+ const cArray=Array.from(tempList)
+undefined
+cArray
+
+cArray.forEach(function(li){
+    console.log(li)
+})
+VM1330:2 <h2 class=​"h2Check">​Lorem ipsum dolor sit.​</h2>​
+VM1330:2 <h2 class=​"h2Check">​Lorem ipsum dolor sit.​</h2>​
+VM1330:2 <h2 class=​"h2Check">​Lorem ipsum dolor sit.​</h2>​
+VM1330:2 <h2 class=​"h2Check">​Lorem ipsum dolor sit.​</h2>​
+undefined
+cArray.forEach(function(li){
+    li.style.color="orange"
+}) -->
+
+ 

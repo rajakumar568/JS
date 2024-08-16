@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating New Element</title>
+</head>
+<body>
+    <!-- <p style="background-color: red;">Hello</p> -->
+</body>
+<script>
+    const div=document.createElement('div');
+    div.className="main"
+    // div.id="myId"
+    div.id=Math.round(Math.random()*10+1)
+    div.setAttribute("title","generated title")
+    div.style.backgroundColor="green"
+    div.style.padding="12px"
+    // console.log(div)
+
+    // //This will first copy the reference then it will update the value. So it will be two round work.
+
+    // div.innerText="Hello there"
+
+    // // This is the another approach to add the text to the docuement.
+   
+    const addText = document.createTextNode("Hello JS");
+    div.appendChild(addText);
+
+    document.body.appendChild(div);
+</script>
+
+</html>
