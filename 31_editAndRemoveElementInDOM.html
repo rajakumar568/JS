@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #121212; color: white">
+    <ul class="language">
+      <li>JS</li>
+    </ul>
+
+    <div class="heading">
+        <h2 class="in">First Element</h2>
+        <!-- <h2 class="in">Second Element</h2> -->
+    </div>
+  </body>
+  <script>
+    function addLanguage(lanName) {
+      const tempLi = document.createElement("li");
+      tempLi.innerHTML = `${lanName}`;
+      document.querySelector(".language").appendChild(tempLi);
+    }
+    addLanguage("Python");
+    addLanguage("CPP");
+
+    // Optimized way
+
+    function addOptLang(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      //here .lanuguage is parent class of the element where we want to do some changes.
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptLang("SQL");
+
+    // Edit
+
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // secondLang.innerHTML="JAVA"
+
+    // second appraoch
+    const newLi = document.createElement("li");
+    newLi.textContent = "C";
+    secondLang.replaceWith(newLi);
+
+    // Third approach
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>TypeScript</li>";
+
+    // Remove element
+    const lastLang=document.querySelector("li:last-child")
+    lastLang.remove()
+
+
+
+    // Here we will modify h2 elements
+    // First we need to create a function for this.
+
+    function addNewH2(langName) {
+        const tempH2=document.createElement('h2');
+        tempH2.innerHTML=`${langName}`;
+        document.querySelector('.heading').appendChild(tempH2);
+    }
+    addNewH2("New One")
+    
+    function addNewwH2(langName) {
+        const tempH2=document.createElement('h2')
+        tempH2.appendChild(document.createTextNode(langName))
+        document.querySelector('.heading').appendChild(tempH2)
+    }
+    addNewwH2('Second One')
+  </script>
+</html>

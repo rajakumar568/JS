@@ -1,0 +1,35 @@
+
+.first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+    text-align: center;
+}
+.second{
+    display:flex;
+    justify-content: center;
+}
+.box{
+    height: 110px;
+    width: 110px;
+    margin: 10px;
+    border: 2px solid black;
+
+}
+#red{
+    background-color: red;
+}
+#blue{
+    background-color: blue;
+}
+#green{
+    background-color: green;
+}
+#grey{
+    background-color: grey;
+}
+#aqua{
+    background-color: aqua;
+}
