@@ -1,0 +1,14 @@
+.first{
+    display: flex;
+    justify-content: center;
+}
+body{
+    background-color: grey;
+}
+#result{
+    /* background: #000; */
+    height: 50px;
+    margin-top: 10px;
+    font-size: 25px;
+    /* width: ; */
+}
