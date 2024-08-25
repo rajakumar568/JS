@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            height: 100vh;
+            margin: 0;
+        }
+        .head {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .line {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <h1>Number Guessing Number</h1>
+        <p class="line">Try and guess a number between 1 to 100.</p>
+        <p class="line">You have 10 attempts to guess the right number.</p>
+        <h1 id="heading" class="line">Guess a number</h1>
+        <input type="text" class="line" id="userInput">
+        <input type="submit" class="line" id="submitButton" value="Submit Guess">
+        <div class="resultParas">
+           <p>Previous Guessues :  <span id="guessues"></span></p>
+           <p>Guess Remaining :  <span id="lastResult">10</span></p>
+           <p class="lowOrHi"></p>
+        </div>
+    </div>
+    <script src="35_guessANumber.js"></script>
+</body>
+</html>

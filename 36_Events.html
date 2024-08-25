@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML Events</title>
+    <style>
+        body{
+            background-color: grey;
+
+        }
+        .image{
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+<h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li>
+                <img class="image" src="https://www.w3schools.com/w3images/lights.jpg" alt="photshop" id="first">
+            </li>
+            <li>
+                <img class="image" src="https://www.w3schools.com/w3images/mountains.jpg" alt="" id="second">
+            </li>
+            <li><img class="image" src="https://www.w3schools.com/w3images/ocean.jpg" alt="Beach Scene" id="third">
+            </li>
+            <li><a href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+// document.getElementById('second').onclick=function()
+// {
+//     alert("Second element.")
+// }
+
+// Here we write false statement because 
+//attachEvent were used earlier
+//jQuery- on were also used
+
+// type of event :-  click, keyboard, hover; timestamp; defaultprevented
+// target, toElement, srcElement, currentTarget
+// clinetX, clientY, screenX, screenY
+// altkey, ctrlkey, shiftkey,keycode
+
+// document.getElementById('second').addEventListener('click',function(e){
+//     alert('Second image clicked.')
+//     console.log(e);
+    
+// },false)
+
+// In this the inside element will have the priority.
+
+// document.getElementById('images').addEventListener('click',function(e){
+//     alert('Clicked inside the ul.')
+//     console.log(`Clicked inside the ul.`);
+// },false)
+
+// document.getElementById('second').addEventListener('click',function(e){
+//     alert('Second element selected.')
+//     //     // this will not bubble to move to upward propogation
+//         e.stopPropagation()
+//     console.log("second element");
+// },false)
+
+// Here the header is considred first. 
+
+// document.getElementById('images').addEventListener('click',function(e){
+//     // alert('Clicked inside the ul.')
+//     console.log(`Clicked inside the ul.`);
+// },true)
+
+// document.getElementById('second').addEventListener('click',function(e){
+//     // alert('Second element selected.')
+//     console.log("second element");
+// },true)
+
+// document.getElementById('google').addEventListener('click',function(e){
+//     e.preventDefault();
+//     e.stopPropagation()
+//     console.log("Google Clicked");
+// },false )
+
+
+// // we will deleting an image
+document.querySelector('#images').addEventListener('click',function (e) {
+//    console.log(e.target.parentNode);
+
+// tagName return the type of element mentioned in the page 
+
+if (e.target.tagName==='IMG') {
+    
+    let removeIt=e.target.parentNode
+    // removeIt.remove()
+
+    removeIt.parentNode.removeChild(removeIt)
+}
+
+},false)
+
+</script>
+</html>

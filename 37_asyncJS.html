@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ASYNC JS</title>
+  </head>
+  <body style="background-color: grey">
+    <h1 id="hh">Button niche hai</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // setTimeout(function () {
+    //     console.log("Print kar rha hu ");
+
+    // },2000)
+
+    const printName = function () {
+      console.log("Hello sir, How are you ?");
+    };
+    // // Here we pass reference we don't call function like printName()
+    setTimeout(printName, 2000);
+
+
+    const changeh=function () {
+        document.querySelector('h1').innerHTML="Thik hai sir, fir milte hai. "
+    }
+
+    const changeMe=setTimeout(changeh, 2000);
+
+    // // Now we will study about stopping the program execution
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("Stopped");
+        
+    })
+  </script>
+</html>
+

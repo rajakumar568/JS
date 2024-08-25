@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>background-color-change</title>
+    <style></style>
+  </head>
+  <body>
+    <h3>Press start to contienously change the background color.</h3>
+    <h3>Press stop to avoid the replacement of background color.</h3>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // // To generate random color using hex
+    const randomColor = function () {
+      const hex = "0123456779ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += hex[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    };
+    // console.log(randomColor());
+    
+    let intervalId;
+    const startChangingColor = function () {
+        if (!intervalId) {
+            intervalId=setInterval(changeColor,1000);
+        }
+
+        function changeColor(){
+            document.body.style.backgroundColor = randomColor();
+        }
+    };
+
+    const stopChangingColor = function () {
+        clearInterval(intervalId);
+        intervalId=null;
+    };
+
+    document
+      .querySelector("#start")
+      .addEventListener('click', startChangingColor);
+    document
+      .querySelector("#stop")
+      .addEventListener('click', stopChangingColor);
+  </script>
+</html>
