@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      /* /* align-items: center; */
+    }
+    #a {
+      height: 300px;
+      width: 300px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+    }
+    #b {
+      /* background-color: red; */
+      height: 100px;
+      width: 300px;
+      /* display: flex; */
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      justify-content: flex-start;
+    }
+  </style>
+  <body>
+    <!-- <div class="img"> -->
+    <div id="a"></div>
+    <div id="b"></div>
+    <button id="checkDetail">Click Here To Check</button>
+    <!-- </div> -->
+  </body>
+  <script>
+    const requestUrl = "https://api.github.com/users/rajakumar568";
+    // const requestUrl = "https://api.github.com/users/aashu150104";
+    const xhr = new XMLHttpRequest();
+    let imgUrl, followers;
+    xhr.open("GET", requestUrl);
+    xhr.onreadystatechange = function () {
+      // console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        // // Here we got the result in string so we will convert it into JSON
+
+        const data = JSON.parse(this.responseText);
+        // console.log(data);
+        // console.log(data.public_repos);
+
+        imgUrl = data.avatar_url;
+        followers = data.followers;
+
+        // imgUrl="https://avatars.githubusercontent.com/u/102853902?v=4";
+
+        const temp = document.querySelector("#checkDetail");
+        temp.addEventListener("click", function () {
+          let imagee = document.getElementById("a");
+          imagee.style.backgroundImage = `url('${imgUrl}')`;
+
+          const text = document.getElementById("b");
+          b.innerHTML = `User follower is ${followers}`;
+        });
+      }
+    };
+    xhr.send();
+  </script>
+</html>
