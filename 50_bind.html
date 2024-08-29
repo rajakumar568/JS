@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React{
+        constructor(){
+            this.library="React"
+            this.server="https://localhost:300"
+
+            //requirement
+            document
+            .querySelector('button')
+            .addEventListener('click',this.handeclick
+            // this will bind the new reference i.e. It will wrap up the above elements library and server
+            .bind(this))
+        }
+        handeclick(){
+            console.log("Button clicked");
+            console.log(this.server);
+            
+            
+        }
+    }
+
+    const app=new React()
+    </script>
+</html>
